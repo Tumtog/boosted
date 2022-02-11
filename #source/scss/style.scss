@@ -1,7 +1,6 @@
 /*Обнуление*/
 @import "_null-style";
 /*--------------------*/
-
 //========================================== шрифты
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 //==========================================
@@ -23,6 +22,7 @@
 	padding: 0 20px;
 	// border: solid 1px #3f3;
 }
+
 //======================================
 main{
 	flex: 1 1 auto;
@@ -679,23 +679,94 @@ body.lock{
 }
 //=========================================пятый блок (видео) конец
 
-//========================================= шестой блок(слайдер) начало 
+//========================================= шестой блок(слайдер) начало
+//====================================== Размер слайдера
+.swiper {
+	width: 100%;
+	height: 300px;
+ }
+//====================================== Общие стили для цен в слайдере
+.price-sale{
+	color: #FF2121;
+}
+.price-sold-out {
+	color: #000;
+	opacity: 0.3;
+}
+//====================================== 
 .accessories {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	min-width: 0;
 	&__title {
 		margin-bottom: 65px;
 		& h3{
 			font-weight: 700;
 			font-size: 32px;
 			line-height: 36px;
+			text-align: center;
 			color: #000;
 		}
 	}
-}
-//========================================= шестой блок(слайдер) начало 
+	&__slider {
+		position: relative;
+	}
+	&__slider-item {
+		max-height: 240px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
+	&__slider-image {
+		width: 185px;
+	}
+
+	&__slider-item-name {
+		font-size: 15px;
+		line-height: 18px;
+		text-align: center;
+		color: #FF4A32;
+		margin: 15px 0 5px 0;
+		max-width: 140px;
+		display: inline-block;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&__slider-item-price {
+		font-size: 14px;
+		line-height: 18px;
+		color: #373737;
+	}
+}
+//========================================= шестой блок(слайдер) конец 
+
+.swiper-button-prev,.swiper-button-next {
+	color: #000;
+	width: 55px;
+	height: 55px;
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 50%;
+	position: absolute;
+}
+.swiper-button-prev{
+	top: 45%;
+	left: 10px;
+}
+.swiper-button-next{
+	top: 45%;
+	right: 10px;
+}
+// .swiper {}
+// .swiper-wrapper {}
+// .swiper-slide {}
+// .swiper-pagination {}
+// .swiper-scrollbar {}
 
 
 
