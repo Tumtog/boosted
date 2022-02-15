@@ -24,6 +24,12 @@
 }
 
 //======================================
+a {
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 main{
 	flex: 1 1 auto;
 }
@@ -115,30 +121,30 @@ body.lock{
 		&__buttons {
 			display: flex;
 			flex-direction: row;
-			width: 70px;
+			width: 100px;
 			justify-content: space-between;
 		}
 
 		&__buttons-user {
-			background: url(../img/icons/avatar.svg) center / 18px 18px no-repeat;
-			width: 18px;
-			height: 18px;
+			background: url(../img/icons/avatar.svg) center / 28px 28px no-repeat;
+			width: 48px;
+			height: 48px;
 			padding: 12px;
 			transition: 0.2s 0s ease;
 			&:hover{
-				background: #000 url(../img/icons/avatar-white.svg) center / 18px 18px no-repeat;
+				background: #000 url(../img/icons/avatar-white.svg) center / 28px 28px no-repeat;
 
 			}
 		}
 
 		&__buttons-cart {
-			background: url(../img/icons/cart.svg) center / 18px 18px no-repeat;
-			width: 18px;
-			height: 18px;
+			background: url(../img/icons/cart.svg) center / 28px 28px no-repeat;
+			width: 48px;
+			height: 48px;
 			padding: 12px;
 			transition: 0.2s 0s ease;
 			&:hover{
-				background: #000 url(../img/icons/cart-white.svg) center / 18px 18px no-repeat;
+				background: #000 url(../img/icons/cart-white.svg) center / 28px 28px no-repeat;
 
 			}
 		}
@@ -478,6 +484,10 @@ body.lock{
 	max-width: 580px;
 	&__image {
 		width: 100%;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			transform: scale(0.95);
+		}
 	}
 
 	&__link {
@@ -488,9 +498,9 @@ body.lock{
 		flex-direction: column;
 		align-items: center;
 		padding: 10px;
-		transition: 0.4s ease 0s;
+		transition: 0.3s ease 0s;
 		&:hover{
-			background: rgba(139, 139, 139, 0.5);
+			background: rgba(255, 255, 255, 0.9);
 			border-radius: 2px;
 		}
 	}
@@ -504,6 +514,10 @@ body.lock{
 		line-height: 30px;
 		color: #fff;
 		text-align: center;
+		transition: 0.3s ease 0s;
+		&:hover{
+			color: #000;
+		}
 	}
 
 	&__link-label {
@@ -699,15 +713,26 @@ body.lock{
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	padding-bottom: 30px;
 	min-width: 0;
 	&__title {
 		margin-bottom: 65px;
+		position: relative;
 		& h3{
 			font-weight: 700;
 			font-size: 32px;
 			line-height: 36px;
 			text-align: center;
 			color: #000;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			bottom: -25px;
+			left: 40%;
+			width: 70px;
+			height: 2px;
+			background-color: #CFCFCF;
 		}
 	}
 	&__slider {
@@ -719,6 +744,10 @@ body.lock{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		transition: all 0.3s ease;
+		&:hover{
+			transform: scale(1.07);
+		}
 	}
 
 	&__slider-image {
@@ -743,9 +772,13 @@ body.lock{
 		line-height: 18px;
 		color: #373737;
 	}
+	&__decor{
+		width: 100%;
+		height: 65px;
+		background: rgba(255, 255, 255, 0.9);
+		box-shadow: 2px 0px 10px rgba(41, 44, 61, 0.34);
+	}
 }
-//========================================= шестой блок(слайдер) конец 
-
 .swiper-button-prev,.swiper-button-next {
 	color: #000;
 	width: 55px;
@@ -767,10 +800,211 @@ body.lock{
 // .swiper-slide {}
 // .swiper-pagination {}
 // .swiper-scrollbar {}
+//========================================= шестой блок(слайдер) конец 
 
 
-
-.footer{
+//========================================= Преимущества начало
+.advantages {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
 	width: 100%;
-	background-color: #0f0f0f;
+	min-height: 310px;
+	background-color: #000;
+	padding: 35px 20px 55px 20px;
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			color: #fff;
+		}
+
+		&__item-image {
+			width: 90px;
+			margin-bottom: 5px;
+			& img{
+				width: 100%;
+			}
+		}
+
+		&__item-label {
+			max-width: 320px;
+			padding: 0 15px 0 15px;
+			margin-bottom: 25px;
+			& h3{
+				text-align: center;
+				font-size: 31px;
+				line-height: 36px;
+				font-weight: 700;
+			}
+		}
+
+		&__item-text {
+			text-align: center;
+			line-height: 22px;
+			font-weight: 400;
+			max-width: 320px;
+			padding: 0 15px 0 15px;
+		}
 }
+
+//========================================= Преимущества адаптив начало
+@media (max-width:900px) {
+	.advantages {
+		flex-wrap: wrap;
+		padding: 35px 20px 0 20px;
+		&__item {
+			padding-bottom: 50px;
+		}
+	}
+}
+//========================================= Преимущества адаптив конец
+//========================================= Преимущества конец
+
+
+//========================================= Футер начало
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #F7F7F7;
+	padding: 0 15px;
+	&__body {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		padding: 50px 0;
+	}
+
+	&__body-logo {
+		max-width: 160px;
+		& img{
+			width: 100%;
+		}
+	}
+
+	&__body-explore {
+		max-width: 200px;
+		padding-right: 15px;
+	}
+
+	&__body-explore-label {
+		font-size: 20px;
+		line-height: 30px;
+		color: #000;
+	}
+
+	&__body-explore-list {
+		margin-top: 15px;
+	}
+
+	&__body-explore-list-item {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		& a {
+			color: #000;
+			font-size: 14px;
+			line-height: 21px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__body-about {
+		max-width: 370px;
+	}
+
+	&__body-about-label {
+		font-size: 20px;
+		line-height: 30px;
+		color: #000;
+	}
+
+	&__body-about-text {
+		margin: 15px 0 40px 0;
+		color: #000;
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	&__body-about-adress {
+		max-width: 220px;
+		& span{
+			display: inline-block;
+			margin-bottom: 10px;
+			color: #000;
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	&__bottom-copyrights {
+		display: flex;
+		flex-direction: row;
+		& p {
+			font-size: 13px;
+			line-height: 19px;
+			color: #000;
+			margin-right: 15px;
+			&:last-child{
+				margin-right: 0;
+			}
+			& span {
+				color: #FF4A32;
+			}
+		}
+	}
+
+	&__bottom-icons {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__bottom-icons-item {
+		max-width: 40px;
+		margin-right: 5px;
+		& img {
+			width: 100%;
+		}
+	}
+}
+.footer-bottom-bg {
+	background-color: #fff;
+}
+
+@media (max-width:900px) {
+	.footer{
+		&__bottom {
+			flex-wrap: wrap;
+		}
+		&__bottom-icons {
+			margin-top: 15px;
+		}
+		&__body-about-text {
+			max-width: 250px;
+		}
+	}
+}
+@media (max-width: 630px) {
+	.footer{
+	&__body-logo{
+		display: none;
+	}
+}
+}
+//========================================= Футер конец
