@@ -58,7 +58,7 @@ body.lock{
 			margin-right: 12px;
 		}
 		&:hover{
-			background: #f7341a;
+			background: #b32614;
 		}
 }
 
@@ -485,9 +485,6 @@ body.lock{
 	&__image {
 		width: 100%;
 		transition: all 0.3s ease 0s;
-		&:hover{
-			transform: scale(0.95);
-		}
 	}
 
 	&__link {
@@ -500,7 +497,7 @@ body.lock{
 		padding: 10px;
 		transition: 0.3s ease 0s;
 		&:hover{
-			background: rgba(255, 255, 255, 0.9);
+			background: rgba(0, 0, 0, 0.5);
 			border-radius: 2px;
 		}
 	}
@@ -515,9 +512,6 @@ body.lock{
 		color: #fff;
 		text-align: center;
 		transition: 0.3s ease 0s;
-		&:hover{
-			color: #000;
-		}
 	}
 
 	&__link-label {
@@ -871,13 +865,13 @@ body.lock{
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: #F7F7F7;
-	padding: 0 15px;
+	
 	&__body {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		justify-content: space-between;
-		padding: 50px 0;
+		padding: 50px 15px;
 	}
 
 	&__body-logo {
@@ -950,7 +944,7 @@ body.lock{
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
-		padding: 20px 0;
+		padding: 20px 15px;
 	}
 
 	&__bottom-copyrights {
@@ -984,6 +978,7 @@ body.lock{
 	}
 }
 .footer-bottom-bg {
+	width: 100%;
 	background-color: #fff;
 }
 

@@ -136,7 +136,7 @@ body.lock {
 }
 
 .btn-primary:hover {
-  background: #f7341a;
+  background: #b32614;
 }
 
 .header-content-container {
@@ -630,11 +630,6 @@ body.lock {
   transition: all 0.3s ease 0s;
 }
 
-.offer-card__image:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
 .offer-card__link {
   position: absolute;
   left: 30%;
@@ -655,7 +650,7 @@ body.lock {
 }
 
 .offer-card__link:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
@@ -672,10 +667,6 @@ body.lock {
   text-align: center;
   -webkit-transition: 0.3s ease 0s;
   transition: 0.3s ease 0s;
-}
-
-.offer-card__link-text:hover {
-  color: #000;
 }
 
 .offer-card__link-label {
@@ -1096,7 +1087,6 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #F7F7F7;
-  padding: 0 15px;
 }
 
 .footer__body {
@@ -1111,7 +1101,7 @@ body.lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 15px;
 }
 
 .footer__body-logo {
@@ -1196,7 +1186,7 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 .footer__bottom-copyrights {
@@ -1244,6 +1234,7 @@ body.lock {
 }
 
 .footer-bottom-bg {
+  width: 100%;
   background-color: #fff;
 }
 
